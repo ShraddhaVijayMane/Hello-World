@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circle/node@4.7.0
- jobs:
+jobs:
   build:
     executor:
       name: node/default
@@ -9,7 +9,7 @@ orbs:
     steps:
       - checkout
       - node/with-cache:
-        steps:
-         - run: npm install
+         steps:
+          - run: npm install
       
       -run: npm run test
